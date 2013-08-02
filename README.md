@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+U should other gem: `mongoid`
+
+```
+class User
+  include Mongoid::Document
+  include Mongoid::IntTimestamps
+
+  field :name, type: String
+end
+
+# test
+User.create(name: "happy").created_at.class.is_a? Fixnum
+```
 
 ## Contributing
 
